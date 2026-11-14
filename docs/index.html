@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart Genset – Brochure</title>
+<meta name="description" content="Connected and intelligent generator set: ESP32 control and protection card, MQTT alerts, Industry 4.0.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Smart Genset">
+<meta property="og:description" content="Industry 4.0 protection for a generator set: ESP32, MQTT, mobile app, Altium PCB and Proteus simulation.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ee;--ink:#1b1d20;--mute:#5d6167;--card:#fff;--line:#ddd6ce;--or:#e8590c;--or2:#ff922b;--gr:#212529;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141618;--ink:#efeae4;--mute:#a09a93;--card:#1d2023;--line:#2f3337}}
+:root[data-theme="dark"]{--bg:#141618;--ink:#efeae4;--mute:#a09a93;--card:#1d2023;--line:#2f3337}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:Rajdhani,'Arial Narrow',sans-serif;line-height:1.02;margin:0;font-weight:700;letter-spacing:.01em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.hazard{height:14px;background:repeating-linear-gradient(-45deg,#f59f00 0 18px,#15191d 18px 36px)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-weight:500}nav b{font:700 22px Rajdhani,sans-serif;letter-spacing:.06em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hs{display:grid;background:#121417;overflow:hidden;margin-bottom:24px}
+.hsl{grid-area:1/1;opacity:0;transition:opacity .8s;pointer-events:none}.hsl.on{opacity:1;pointer-events:auto}
+.im{overflow:hidden}.hsl img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}.hsl.fit img{object-fit:contain;background:#121417}
+.cap{margin:0;color:#fff;padding:12px 16px 0;text-align:center;font-size:16px}
+.cc{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px}.hs .cc{grid-area:2/1}
+.cc button{width:40px;height:40px;border:2px solid var(--ink);background:var(--card);color:var(--ink);font:700 22px/1 Rajdhani,sans-serif;cursor:pointer}.hs .cc button{background:#0008;border-color:#fff;color:#fff}
+button:focus-visible,.track:focus-visible,input:focus-visible{outline:3px solid #f59f00;outline-offset:2px}
+.dots{display:flex;gap:8px}.dots i{width:10px;height:10px;border-radius:50%;background:#8b8680;opacity:.6}.dots i.on{background:var(--or2);opacity:1;outline:1px solid #15191d}
+.lead{font-size:20px;color:var(--mute);max-width:60ch;margin:28px 0 0}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.tag{background:var(--gr);color:#fff;padding:6px 14px;font-size:15px;font-weight:600}
+section{padding:60px 0;border-top:1px solid var(--line)}section h2{font-size:clamp(34px,4.6vw,56px);margin-bottom:12px}
+.sub{color:var(--mute);max-width:60ch;margin:0 0 30px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.c{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--or2);padding:20px}.c h3{font-size:26px;margin-bottom:6px}.c p{margin:0;color:var(--mute)}.c .n{font:700 36px Rajdhani,sans-serif;color:var(--or)}
+.lab{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;background:#15181b;padding:20px;color:#efeae4}
+canvas{width:100%;aspect-ratio:16/10;display:block;background:radial-gradient(circle at 50% 30%,#2b2f34,#121417);cursor:grab;touch-action:pan-y}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chips button{background:#24282c;color:#efeae4;border:1px solid #3b4047;padding:6px 12px;font:500 14px Inter,sans-serif;cursor:pointer;border-radius:99px}.chips button[aria-pressed=true]{background:var(--or2);color:#241100;border-color:var(--or2)}
+.info{background:#24282c;padding:14px 16px;min-height:96px;font-size:15px}.info b{font:700 22px Rajdhani,sans-serif;display:block;margin-bottom:4px}
+.hint{font-size:13px;color:#a09a93;margin:8px 0 0}
+.sim{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;background:#15181b;padding:20px;color:#efeae4}
+.plant{background:#1e2226;border-radius:6px}.plant svg{width:100%;display:block}
+.box{background:linear-gradient(160deg,#b6bec6,#8b949c);border-radius:8px;padding:16px;color:#16191c;box-shadow:inset 0 0 0 3px #5b636a}
+.lcd{background:#9bbf3f;border:3px solid #2b3a10;font:700 15px/1.45 'DejaVu Sans Mono',Consolas,monospace;color:#1f2d0a;padding:8px 10px;white-space:pre;overflow:hidden;letter-spacing:.02em}
+.leds{display:flex;gap:16px;margin:14px 0 6px;align-items:center;flex-wrap:wrap}.led{display:flex;flex-direction:column;align-items:center;font-size:11px;font-weight:600;gap:4px}.led i{width:22px;height:22px;border-radius:50%;background:#444;border:2px solid #0004;transition:.2s}
+.led.on i{box-shadow:0 0 14px 4px var(--c);background:var(--c)}.led.buz.on i{animation:bz .3s infinite alternate}@keyframes bz{to{transform:scale(1.25)}}
+.ctl{display:grid;gap:10px}.ctl label{display:grid;grid-template-columns:90px 1fr 56px;align-items:center;gap:8px;font-size:14px;color:#efeae4}.ctl input[type=range]{width:100%;accent-color:var(--or2)}.ctl output{font-weight:700;text-align:right}
+.btns{display:flex;gap:8px;flex-wrap:wrap}.btns button{background:#24282c;color:#efeae4;border:1px solid #3b4047;padding:8px 14px;font:600 14px Inter,sans-serif;cursor:pointer}.btns button[aria-pressed=true]{background:var(--or2);color:#241100}.btns .rs{background:#f6c200;color:#222;border-color:#f6c200}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes dash{to{stroke-dashoffset:-24}}@keyframes pls{50%{opacity:.35}}
+.fan{transform-box:fill-box;transform-origin:center}.run .fan{animation:spin 1s linear infinite}.flow{stroke-dasharray:6 6}.pump .flow{animation:dash .6s linear infinite}.alm .beacon{animation:pls .5s infinite}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
+.sl{flex:0 0 100%;scroll-snap-align:center;margin:0;display:grid;grid-template-columns:1.6fr 1fr;background:var(--card);border:1px solid var(--line);min-height:340px}
+.sl img{width:100%;height:100%;max-height:480px;object-fit:contain;background:#fff;display:block}
+.sl figcaption,.sl.tx>div{padding:24px;align-self:center}.sl.tx{grid-template-columns:1fr}
+.sl h3{font-size:30px;margin-bottom:8px}.sl p{margin:0;color:var(--mute)}.sl ul{margin:10px 0 0;padding-left:20px;color:var(--mute)}.sl li{margin:4px 0}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.team div{background:var(--card);border:1px solid var(--line);padding:22px}.team small{display:block;color:var(--mute);font-size:14px;margin-bottom:6px}.team strong{font:700 26px Rajdhani,sans-serif}
+footer{background:var(--gr);color:#efeae4;padding:32px 0}footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer p{margin:2px 0;color:#b5aea6}
+@media (max-width:900px){.g3,.g4,.team{grid-template-columns:1fr}.lab,.sim,.sl{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.run .fan,.pump .flow,.alm .beacon,.led.buz.on i{animation:none}}
+</style>
+</head>
+<body>
+<div class="hazard"></div>
+<div class="wrap">
+<nav><b>SMART GENSET</b><span>Industry 4.0 · SITEX · ISET Mahdia</span></nav>
+<div class="hs" id="hs" aria-roledescription="carousel" aria-label="Project overview"><h1 class="sr">Smart Genset</h1>
+<div class="hsl on"><div class="im"><img data-wp alt="Genset, control box, MQTT cloud and mobile app"></div><p class="cap">Industry 4.0 protection for a generator set</p></div>
+<div class="hsl fit"><div class="im"><img src="assets/the-real-prototype-box-and-the-final-car.jpg" alt="The real prototype box and the final card"></div><p class="cap">The real prototype: aluminium box, states and final card</p></div>
+<div class="hsl fit"><div class="im"><img src="assets/proteus-simulation-of-the-system.jpg" alt="Proteus simulation of the system"></div><p class="cap">Proteus simulation of the whole system</p></div>
+<div class="cc"><button class="pv" aria-label="Previous slide">‹</button><span class="dots"></span><button class="nx" aria-label="Next slide">›</button></div></div>
+<p class="lead">A connected and intelligent control and protection card for a generator set. It watches the mains, the fuel reserve, the engine temperature and the battery, protects the engine and sends every alert over MQTT.</p>
+<div class="tags"><span class="tag">ESP32</span><span class="tag">MQTT</span><span class="tag">Mobile app</span><span class="tag">Altium · Proteus</span></div>
+
+<section>
+<h2>Industry 4.0 for power backup</h2>
+<p class="sub">A generator that fails silently is a risk for the whole plant. Overload, bad fuel, a flat battery, electrical faults and heat all threaten it. The answer is a card that measures, decides and reports in real time.</p>
+<div class="g4">
+<div class="c"><div class="n">01</div><h3>Mains watch</h3><p>When the STEG supply is cut, the genset starts. When it returns, the genset stops.</p></div>
+<div class="c"><div class="n">02</div><h3>Reserve</h3><p>A float sensor keeps the tank full. At 20 % the pump starts and an alarm sounds.</p></div>
+<div class="c"><div class="n">03</div><h3>Temperature</h3><p>A Pt100 probe protects against overheating. Above 90 °C the motor and the pump stop.</p></div>
+<div class="c"><div class="n">04</div><h3>Battery</h3><p>Below 11.5 V the charger starts and the alarm is raised.</p></div>
+</div>
+</section>
+
+<section id="card">
+<h2>The control card in 3D</h2>
+<p class="sub">Rotate the card and pick a component to highlight it.</p>
+<div class="lab"><div><canvas id="pcv" aria-label="3D model of the control card"></canvas><p class="hint">Drag to rotate. Simplified 3D model based on the real card layout.</p></div><div><div class="info" id="pin"></div><div class="chips" id="pch"></div></div></div>
+</section>
+
+<section id="anim">
+<h2>The final project in motion</h2>
+<p class="sub">A compact simulation of the prototype box. Move the sliders, cut the mains or press Manual start. Anomalies stay on the screen until you press Reset, like on the real box. Values are demo data.</p>
+<div class="sim"><div>
+<div class="plant" id="plant"><svg viewBox="0 0 520 250" role="img" aria-label="Genset, tank, pump and battery animation">
+<g id="pole"><path d="M30 220V60M10 80h40M14 100h32" stroke="#868e96" stroke-width="5" fill="none"/><path id="bolt" d="M30 108l-12 22h10l-6 22 18-28h-10l8-16z" fill="#ffd43b"/><path id="cut" d="M8 60l44 80" stroke="#ff6b6b" stroke-width="6" opacity="0"/><text x="30" y="242" fill="#b5aea6" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">STEG</text></g>
+<g id="gen"><rect x="110" y="110" width="150" height="100" fill="#f76707"/><rect x="120" y="96" width="90" height="16" fill="#d9480f"/><rect x="215" y="120" width="70" height="90" fill="#868e96"/><rect x="226" y="60" width="12" height="54" fill="#343a40"/><circle class="fan" cx="160" cy="160" r="30" fill="#212529"/><path class="fan" d="M160 132v56M132 160h56M140 140l40 40M180 140l-40 40" stroke="#ffa94d" stroke-width="5"/><text x="195" y="242" fill="#b5aea6" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">GENSET</text></g>
+<g id="tk"><rect x="320" y="90" width="64" height="120" fill="#343a40" stroke="#868e96" stroke-width="3"/><rect id="lvl" x="324" y="206" width="56" height="0" fill="#4dabf7"/><text x="352" y="242" fill="#b5aea6" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">RESERVE</text></g>
+<g id="pp"><circle cx="352" cy="62" r="18" fill="#495057"/><path d="M352 52v20M342 62h20" stroke="#fff" stroke-width="3"/><path class="flow" d="M352 80V92" stroke="#4dabf7" stroke-width="5" fill="none"/></g>
+<g id="bt"><rect x="430" y="150" width="70" height="44" fill="#343a40" stroke="#868e96" stroke-width="3"/><rect x="500" y="162" width="8" height="20" fill="#868e96"/><rect id="bfill" x="434" y="154" width="0" height="36" fill="#ffd43b"/><path id="chg" d="M462 120l-10 18h8l-4 16 14-22h-8l6-12z" fill="#ffd43b" opacity="0"/><text x="465" y="242" fill="#b5aea6" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">BATTERY</text></g>
+<g id="th"><rect x="268" y="40" width="10" height="64" rx="5" fill="#495057"/><rect id="tfill" x="270" y="100" width="6" height="0" fill="#40c057"/><circle cx="273" cy="108" r="9" fill="#40c057" id="tbulb"/></g>
+<circle class="beacon" id="bcn" cx="130" cy="82" r="12" fill="#c92a2a" opacity="0"/>
+</svg></div>
+<div class="ctl" style="margin-top:14px"><label>Reserve<input type="range" id="sR" min="0" max="100" value="80"><output id="oR"></output></label><label>Temperature<input type="range" id="sT" min="20" max="120" value="45"><output id="oT"></output></label><label>Battery<input type="range" id="sB" min="100" max="140" value="126"><output id="oB"></output></label>
+<div class="btns"><button id="bS" aria-pressed="true">Mains: ON</button><button id="bM" aria-pressed="false">Manual start</button><button id="bX" class="rs">Reset</button><button id="bD" aria-pressed="true">Auto demo</button></div></div></div>
+<div class="box"><div class="lcd" id="lcd"></div>
+<div class="leds"><div class="led" id="l0" style="--c:#37d67a"><i></i>MOTOR</div><div class="led" id="l1" style="--c:#4dabf7"><i></i>PUMP</div><div class="led" id="l2" style="--c:#ffd43b"><i></i>CHARGER</div><div class="led" id="l3" style="--c:#ff4d4d"><i></i>ALARM</div><div class="led buz" id="l4" style="--c:#fff"><i></i>BUZZER</div></div>
+<p style="margin:10px 0 0;font-size:13px;color:#2c3136">Rules from the report: reserve 20 % or less, temperature above 90 °C, battery under 11.5 V.</p></div></div>
+</section>
+
+<section id="software"><h2>Software design</h2><p class="sub">The software was built with Scrum in five sprints, one per safety function, and modelled with UML before coding.</p><div class="car" aria-roledescription="carousel" aria-label="Software design"><div class="track" tabindex="0"><div class="sl tx"><div><h3>Five sprints</h3><ul><li><b>1. STEG:</b> start the genset on a power cut, stop it when the mains return</li><li><b>2. Reserve:</b> keep the tank full with a pump</li><li><b>3. Temperature:</b> stop the motor above 90 °C</li><li><b>4. Battery:</b> start the charger below 11.5 V</li><li><b>5. Alarm and send:</b> buzzer, LED, LCD message and MQTT publication</li></ul></div></div><figure class="sl"><img src="assets/clean-architecture-layers.jpg" alt="Clean architecture layers"><figcaption><h3>Clean architecture</h3><p>Presentation, application, domain and infrastructure layers keep the code extensible and easy to change.</p></figcaption></figure><figure class="sl"><img src="assets/global-use-case-diagram.jpg" alt="Global use case diagram"><figcaption><h3>Global use case</h3><p>The actors, the four control subsystems and the alarm and send function around the genset.</p></figcaption></figure><figure class="sl"><img src="assets/state-diagram-of-the-steg-system.jpg" alt="State diagram of the STEG system"><figcaption><h3>State diagram: STEG</h3><p>POWER_IS_CUT starts the motor, POWER_IS_ON stops it. The same pattern is used for the reserve, temperature and battery.</p></figcaption></figure><figure class="sl"><img src="assets/class-diagram-of-the-steg-system.jpg" alt="Class diagram of the STEG system"><figcaption><h3>Class diagram</h3><p>The object-oriented design in C++ is split into the STEG, reserve, temperature, battery and alarm subsystems.</p></figcaption></figure><figure class="sl"><img src="assets/mqtt-publishing-states.jpg" alt="MQTT publishing states"><figcaption><h3>MQTT publishing states</h3><p>Connect to Wi-Fi, connect to the broker, then publish: power cut, battery low, reserve empty, critical temperature.</p></figcaption></figure></div><div class="cc"><button class="pv" aria-label="Previous slide">‹</button><span class="dots"></span><button class="nx" aria-label="Next slide">›</button></div></div></section>
+<section id="hardware"><h2>Embedded hardware design</h2><p class="sub">An ESP32 card with its sensors, indicators and relay, designed in Altium Designer.</p><div class="car" aria-roledescription="carousel" aria-label="Embedded hardware design"><div class="track" tabindex="0"><figure class="sl"><img src="assets/esp32-devkit-board.jpg" alt="ESP32 DevKit board"><figcaption><h3>ESP32 DevKit V1</h3><p>The brain of the card: 240 MHz dual core, Wi-Fi and Bluetooth, 3.3 V supply.</p></figcaption></figure><figure class="sl"><img src="assets/block-diagram-of-the-system.jpg" alt="Block diagram of the system"><figcaption><h3>Block diagram</h3><p>The ESP32 at the centre, with the Pt100, float and voltage sensors, LEDs, buzzer, LCD and relay, and the power supply.</p></figcaption></figure><figure class="sl"><img src="assets/general-architecture-of-the-project.jpg" alt="General architecture of the project"><figcaption><h3>General architecture</h3><p>Anomalies are shown on the LCD, saved in a database, and an alarm can alert the firefighters when needed.</p></figcaption></figure><figure class="sl"><img src="assets/altium-schematic.jpg" alt="Altium schematic"><figcaption><h3>Electronic schematic</h3><p>The complete wiring of the card drawn in Altium Designer.</p></figcaption></figure><figure class="sl"><img src="assets/pcb-layout.jpg" alt="PCB layout"><figcaption><h3>PCB layout</h3><p>Component placement and routing, planned for electrical integrity, heat and low interference.</p></figcaption></figure><figure class="sl"><img src="assets/3d-view-of-the-pcb.jpg" alt="3D view of the PCB"><figcaption><h3>3D view of the card</h3><p>The board with its LEDs, buttons and potentiometers previewed in 3D.</p></figcaption></figure><div class="sl tx"><div><h3>Components and cost</h3><ul><li>ESP32 DevKit V1 and cable: 46.800 DT</li><li>LCD 4x20 with I2C: 32.000 DT</li><li>Buzzer: 6.000 DT</li><li>2 potentiometers: 2.999 DT each</li><li>5 buttons: 2.500 DT each</li><li>4 LEDs: 0.100 DT each</li><li>Accessories: 20 DT</li><li><b>Total: 123.798 DT</b>, about 130 DT for the whole project</li></ul></div></div></div><div class="cc"><button class="pv" aria-label="Previous slide">‹</button><span class="dots"></span><button class="nx" aria-label="Next slide">›</button></div></div></section>
+<section id="results"><h2>Simulation and final product</h2><p class="sub">Every state was simulated in Proteus, then built and tested in an aluminium box.</p><div class="car" aria-roledescription="carousel" aria-label="Simulation and final product"><div class="track" tabindex="0"><figure class="sl"><img src="assets/proteus-simulation-stable-system.jpg" alt="Proteus simulation, stable system"><figcaption><h3>Simulation: stable</h3><p>Temperature under 90 °C, reserve full, battery charged: the motor runs and the alarm is off.</p></figcaption></figure><figure class="sl"><img src="assets/proteus-simulation-empty-reserve.jpg" alt="Proteus simulation, empty reserve"><figcaption><h3>Simulation: reserve empty</h3><p>At 20 % the motor stops, the pump starts, the alarm sounds and the LCD shows RESERVE EMPTY.</p></figcaption></figure><figure class="sl"><img src="assets/proteus-simulation-high-temperature.jpg" alt="Proteus simulation, high temperature"><figcaption><h3>Simulation: temperature high</h3><p>Above 90 °C the motor and the pump stop and the alarm shows TEMP HIGH.</p></figcaption></figure><figure class="sl"><img src="assets/proteus-simulation-low-battery.jpg" alt="Proteus simulation, low battery"><figcaption><h3>Simulation: battery low</h3><p>Under 11.5 V the charger starts, the alarm sounds and the motor stops.</p></figcaption></figure><figure class="sl"><img src="assets/front-of-the-aluminium-box.jpg" alt="Front of the aluminium box"><figcaption><h3>The box, front view</h3><p>An aluminium box with the LCD, the LEDs and the buttons on the perforated front face.</p></figcaption></figure><figure class="sl"><img src="assets/inside-the-box.jpg" alt="Inside the box"><figcaption><h3>Inside the box</h3><p>All the electronics are mounted inside the box.</p></figcaption></figure><figure class="sl"><img src="assets/the-box-in-several-states.jpg" alt="The box in several states"><figcaption><h3>The box in several states</h3><p>Green motor, blue pump, yellow charger and red alarm lit according to the state.</p></figcaption></figure><figure class="sl"><img src="assets/final-card.jpg" alt="Final card"><figcaption><h3>The final card</h3><p>The assembled electronic card. SITEX plans to deploy it with industrial sensors.</p></figcaption></figure></div><div class="cc"><button class="pv" aria-label="Previous slide">‹</button><span class="dots"></span><button class="nx" aria-label="Next slide">›</button></div></div></section>
+
+<section>
+<h2>The team</h2>
+<p class="sub">A master’s final project in IoT services development, carried out at SITEX with Pépinière Mahdia.</p>
+<div class="team"><div><small>Design and development</small><strong>Houssem Khadhraoui</strong></div><div><small>Company supervisor (SITEX)</small><strong>Mr. Yazidi Abdelmajid</strong></div><div><small>Academic supervisor</small><strong>Mr. Tarek Jalled</strong></div></div>
+</section>
+</div>
+<footer><div class="wrap"><div><b style="font:700 24px Rajdhani,sans-serif">SMART GENSET</b><p>Contact: add your email or LinkedIn here</p></div><p>ISET Mahdia · Computer Science Department</p></div></footer>
+<div class="hazard"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+var WP="assets/wallpaper.jpg";document.querySelectorAll('img[data-wp]').forEach(function(i){i.src=WP});
+function dots(c,n,f){var d=c.querySelector('.dots');for(var i=0;i<n;i++)d.appendChild(document.createElement('i'));f(0)}
+document.querySelectorAll('.car').forEach(function(c){var t=c.querySelector('.track'),n=t.children.length;
+function mark(i){var d=c.querySelectorAll('.dots i');for(var k=0;k<d.length;k++)d[k].className=k==i?'on':''}
+dots(c,n,mark);function go(d){t.scrollBy({left:d*t.clientWidth,behavior:'smooth'})}
+c.querySelector('.pv').onclick=function(){go(-1)};c.querySelector('.nx').onclick=function(){go(1)};
+t.addEventListener('scroll',function(){mark(Math.round(t.scrollLeft/(t.clientWidth+16)))})});
+(function(){var h=document.getElementById('hs'),s=h.querySelectorAll('.hsl'),i=0,tm,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function show(k){i=(k+s.length)%s.length;for(var j=0;j<s.length;j++)s[j].classList.toggle('on',j==i);var d=h.querySelectorAll('.dots i');for(j=0;j<d.length;j++)d[j].className=j==i?'on':''}
+dots(h,s.length,show);function auto(){if(!rm){clearInterval(tm);tm=setInterval(function(){show(i+1)},5000)}}
+h.querySelector('.pv').onclick=function(){show(i-1);auto()};h.querySelector('.nx').onclick=function(){show(i+1);auto()};
+h.addEventListener('mouseenter',function(){clearInterval(tm)});h.addEventListener('mouseleave',auto);show(0);auto()})();
+/* ---- 3D card ---- */
+var $=function(i){return document.getElementById(i)};
+var PB=[['ESP32 DevKit V1','ESP32',-.4,-1.2,1.4,2.2,.12,0x1a1d22,'esp','Dual-core 240 MHz microcontroller with Wi-Fi and Bluetooth. It reads the inputs, runs the control logic, drives the outputs and publishes the alerts over MQTT.'],
+['Relay output','RELAY',-1.5,1.35,1.1,.9,.7,0x1c7ed6,0,'Relay that starts or stops the generator and switches external circuits.'],
+['STEG input','STEG',-2.9,-1.85,.6,.8,.4,0x1f9d55,2,'Detects the mains supply. When it is cut, the genset starts.'],
+['Pt100 input','Pt100',-2.9,-.9,.6,.8,.4,0x1f9d55,2,'Temperature probe of the generator. Above 90 °C the motor and the pump stop and the alarm starts.'],
+['Float input','FLOAT',-2.9,.05,.6,.8,.4,0x1f9d55,2,'Float level sensor of the reserve. At 20 % the pump starts to refill it.'],
+['Battery voltage input','BATT V',-2.9,1.0,.6,.8,.4,0x1f9d55,2,'Battery voltage measure. Under 11.5 V the charger starts.'],
+['LCD I2C header','LCD I2C',2.5,.2,.45,1.0,.35,0x1f9d55,4,'4-pin I2C header for the 4x20 LCD that shows the critical values and the detected anomaly.'],
+['Push buttons','',-1.9,-1.95,.45,.45,.3,0x868e96,'btn','Five push buttons. The yellow one is RESET: it clears the displayed anomaly.'],['Push buttons','',-1.0,-1.95,.45,.45,.3,0x868e96,'btn',''],['Push buttons','',-.1,-1.95,.45,.45,.3,0x868e96,'btn',''],['Push buttons','',.8,-1.95,.45,.45,.3,0x868e96,'btn',''],['Push buttons','',1.7,-1.95,.45,.45,.3,0xf6c200,'btn',''],
+['Potentiometers','',2.6,-1.4,.6,.5,.3,0x1c7ed6,'pot','Two adjustable inputs on the prototype card.'],['Potentiometers','',2.6,-.6,.6,.5,.3,0x1c7ed6,'pot',''],
+['Status LEDs','',-.1,1.95,.2,.2,.25,0x37d67a,'led','Four LEDs: green for the motor, blue for the pump, yellow for the charger and red for the alarm.'],['Status LEDs','',.6,1.95,.2,.2,.25,0x4dabf7,'led',''],['Status LEDs','',1.3,1.95,.2,.2,.25,0xffd43b,'led',''],['Status LEDs','',2,1.95,.2,.2,.25,0xff4d4d,'led',''],
+['Buzzer','',2.5,1.9,.35,.35,.35,0x111111,'buz','Sounds when an anomaly is active.']];
+var pR=new THREE.WebGLRenderer({canvas:$('pcv'),alpha:true,antialias:true}),pS=new THREE.Scene(),pC=new THREE.PerspectiveCamera(36,1.6,.1,100),pG=new THREE.Group(),pM={},pd=false,px=0;
+pC.position.set(0,7.6,7);pC.lookAt(0,0,0);pS.add(pG);pS.add(new THREE.AmbientLight(0xffffff,.75));var dl=new THREE.DirectionalLight(0xffffff,.85);dl.position.set(3,8,4);pS.add(dl);
+function MM(c){return new THREE.MeshStandardMaterial({color:c,roughness:.55,metalness:.15})}
+function ad(g,c,x,y,z){var m=new THREE.Mesh(g,MM(c));m.position.set(x,y,z);m.userData.e=0;pG.add(m);return m}
+function lab(t,x,y,z,w){var c=document.createElement('canvas');c.width=256;c.height=64;var g=c.getContext('2d');g.font='700 30px sans-serif';g.textAlign='center';g.textBaseline='middle';g.lineWidth=6;g.strokeStyle='#000';g.strokeText(t,128,32);g.fillStyle='#fff';g.fillText(t,128,32);var m=new THREE.Mesh(new THREE.PlaneGeometry(w,w/4),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(c),transparent:true}));m.rotation.x=-1.5708;m.position.set(x,y,z);pG.add(m)}
+ad(new THREE.BoxGeometry(6.6,.12,4.8),0x1c6b2f,0,0,0);
+[[-1,-1],[1,-1],[-1,1],[1,1]].forEach(function(s){ad(new THREE.CylinderGeometry(.11,.11,.14,16),0x0b1a10,s[0]*3.05,0,s[1]*2.15)});
+var es=PB[0];PB.forEach(function(p,i){if(i&&typeof p[8]!='string'||i&&p[8]=='btn'||i&&p[8]=='led'||i&&p[8]=='pot'){var cx=p[2]+p[4]/2,cz=p[3]+p[5]/2,ex=es[2]+.7,ez=es[3]+1.1;ad(new THREE.BoxGeometry(Math.abs(cx-ex)+.06,.012,.06),0xd9b44a,(cx+ex)/2,.066,cz);ad(new THREE.BoxGeometry(.06,.012,Math.abs(cz-ez)+.06),0xd9b44a,ex,.066,(cz+ez)/2)}});
+PB.forEach(function(p){var h=p[6],k=p[8],m,y=.06+h/2,cx=p[2]+p[4]/2,cz=p[3]+p[5]/2;
+if(k=='led'){m=ad(new THREE.CylinderGeometry(.17,.17,h,20),p[7],cx,y,cz);m.material.emissive.setHex(p[7]);m.material.emissiveIntensity=.35;m.userData.e=m.material.emissive.getHex()}
+else if(k=='buz'){m=ad(new THREE.CylinderGeometry(.35,.35,h,24),p[7],cx,y,cz)}
+else if(k=='btn'){m=ad(new THREE.BoxGeometry(p[4],h,p[5]),0x2b2f33,cx,y,cz);var q=ad(new THREE.CylinderGeometry(.14,.14,.16,16),p[7],cx,.06+h+.05,cz);(pM[p[0]]=pM[p[0]]||[]).push(q)}
+else if(k=='pot'){m=ad(new THREE.BoxGeometry(p[4],h,p[5]),p[7],cx,y,cz);var q2=ad(new THREE.CylinderGeometry(.14,.14,.2,16),0xdddddd,cx,.06+h+.08,cz);(pM[p[0]]=pM[p[0]]||[]).push(q2)}
+else m=ad(new THREE.BoxGeometry(p[4],h,p[5]),p[7],cx,y,cz);
+(pM[p[0]]=pM[p[0]]||[]).push(m);
+if(k=='esp'){var sh=ad(new THREE.BoxGeometry(.9,.1,.9),0xb8c0c8,cx,.17,cz+.55);pM[p[0]].push(sh);for(var j=0;j<10;j++)[-1,1].forEach(function(s){pM[p[0]].push(ad(new THREE.BoxGeometry(.12,.03,.07),0xe3b341,cx+s*.7,.1,cz-1+j*.2))})}
+else if(typeof k=='number'&&k>0)for(var j=0;j<k;j++){var big=p[4]>p[5];pM[p[0]].push(ad(new THREE.CylinderGeometry(.09,.09,.05,14),0xdfe3e6,big?p[2]+(j+.5)*p[4]/k:cx,.06+h+.02,big?cz:p[3]+(j+.5)*p[5]/k))}
+if(p[1])lab(p[1],cx,.06+h+.04,cz+(k=='esp'?-.6:(k>0?(p[4]>p[5]?.42:0):0)),1.0)});
+function pHl(n){for(var k in pM)pM[k].forEach(function(m){m.material.emissive.setHex(k==n?0x886600:m.userData.e)})}
+var seen={};PB.forEach(function(p){if(p[9]&&!seen[p[0]]){seen[p[0]]=1;var b=document.createElement('button');b.textContent=p[0];b.setAttribute('aria-pressed','false');b.onclick=function(){pick(p[0],p[9])};$('pch').appendChild(b)}});
+function pick(n,d){$('pin').innerHTML='<b>'+n+'</b>'+d;pHl(n);var c=$('pch').children;for(var i=0;i<c.length;i++)c[i].setAttribute('aria-pressed',c[i].textContent==n)}
+var cvp=$('pcv');cvp.addEventListener('pointerdown',function(e){pd=true;px=e.clientX;cvp.setPointerCapture(e.pointerId)});cvp.addEventListener('pointermove',function(e){if(pd){pG.rotation.y+=(e.clientX-px)*.008;px=e.clientX}});cvp.addEventListener('pointerup',function(){pd=false});
+function psz(){var w=cvp.clientWidth;pR.setPixelRatio(Math.min(devicePixelRatio,2));pR.setSize(w,w/1.6,false)}addEventListener('resize',psz);psz();pick(PB[0][0],PB[0][9]);
+(function l(t){requestAnimationFrame(l);if(!pd&&!matchMedia('(prefers-reduced-motion:reduce)').matches)pG.rotation.y=Math.sin(t/3500)*.55;pR.render(pS,pC)})(0);
+/* ---- animation ---- */
+var R=80,T=45,B=12.6,steg=true,man=false,latch='',demo=true,dt;
+function pad(n,w){n=String(n);while(n.length<w)n=' '+n;return n}
+function calc(){var aR=R<=20,aT=T>90,aB=B<11.5,aS=!steg;
+var motor=(aS||man)&&!aR&&!aT&&!aB,pump=aR&&!aT,chg=aB&&!aT,alarm=aR||aT||aB;
+if(aT)latch='TEMP HIGH';else if(aB)latch='BATTERIE LOW !!';else if(aR)latch='RESERVE EMPTY';
+var l4=latch||(aS?'POWER IS CUT':'SYSTEM STABLE');
+$('lcd').textContent=('STEG:'+(steg?'ON ':'CUT')+' MOTOR:'+(motor?'ON ':'OFF')).padEnd(20)+'\n'+('RESERVE: '+R+' %').padEnd(20)+'\n'+('TEMP:'+T+'C BATT:'+B.toFixed(1)+'V').padEnd(20)+'\n'+l4.padEnd(20);
+[motor,pump,chg,alarm,alarm].forEach(function(v,i){$('l'+i).classList.toggle('on',v)});
+var p=$('plant');p.classList.toggle('run',motor);p.classList.toggle('pump',pump);p.classList.toggle('alm',alarm);
+$('lvl').setAttribute('height',1.2*R*.95);$('lvl').setAttribute('y',206-1.2*R*.95);
+var th=Math.max(0,(T-20)/100*58);$('tfill').setAttribute('height',th);$('tfill').setAttribute('y',100-th);var tc=aT?'#fa5252':T>70?'#fab005':'#40c057';$('tfill').setAttribute('fill',tc);$('tbulb').setAttribute('fill',tc);
+$('bfill').setAttribute('width',Math.max(0,Math.min(1,(B-10)/4))*62);$('bfill').setAttribute('fill',aB?'#fa5252':'#ffd43b');$('chg').setAttribute('opacity',chg?1:0);
+$('cut').setAttribute('opacity',steg?0:1);$('bolt').setAttribute('opacity',steg?1:.3);$('bcn').setAttribute('opacity',alarm?1:0);
+$('oR').textContent=R+' %';$('oT').textContent=T+' °C';$('oB').textContent=B.toFixed(1)+' V';$('bS').textContent='Mains: '+(steg?'ON':'CUT');$('bS').setAttribute('aria-pressed',steg);$('bM').setAttribute('aria-pressed',man)}
+function stop(){demo=false;clearInterval(dt);$('bD').setAttribute('aria-pressed',false)}
+function setv(r,t,b,s,m){R=r;T=t;B=b;steg=s;man=m;$('sR').value=r;$('sT').value=t;$('sB').value=Math.round(b*10);calc()}
+var sc=[[80,45,12.6,true,true],[15,45,12.6,true,true],[80,45,12.6,true,true,1],[80,95,12.6,true,true],[80,45,12.6,true,true,1],[80,45,11,true,true],[80,45,12.6,true,true,1],[80,45,12.6,false,false]],si=0;
+function step(){var s=sc[si%sc.length];si++;if(s[5]){latch='';}setv(s[0],s[1],s[2],s[3],s[4])}
+function startDemo(){demo=true;$('bD').setAttribute('aria-pressed',true);clearInterval(dt);step();dt=setInterval(step,2600)}
+['sR','sT','sB'].forEach(function(id){$(id).oninput=function(){stop();R=+$('sR').value;T=+$('sT').value;B=$('sB').value/10;calc()}});
+$('bS').onclick=function(){stop();steg=!steg;calc()};$('bM').onclick=function(){stop();man=!man;calc()};
+$('bX').onclick=function(){stop();var aR=R<=20,aT=T>90,aB=B<11.5;if(!(aR||aT||aB))latch='';calc()};
+$('bD').onclick=function(){demo?stop():startDemo()};
+setv(80,45,12.6,true,true);
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){startDemo();o.disconnect()}},{threshold:.4}).observe($('anim'))}
+</script>
+</body>
+</html>
